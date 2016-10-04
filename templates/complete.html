@@ -1,0 +1,103 @@
+<!DOCTYPE html> 
+<html> 
+    <head>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script>
+	$(function(){
+		$('#btnSignOut').click(function(){
+			$.ajax({
+				type: 'POST',
+				url: '/signOut',
+				data: {'key' : 'welcome'},
+				dataType: 'html',
+				success: function(response){
+					window.location.href = '/'
+					console.log(response);
+				},
+				error: function(error){
+					console.log(error);
+				}
+			});
+		});
+	
+});
+</script>	
+		
+<style type="text/css">
+            .header
+{
+    margin-top: 40px;
+}
+
+.btn
+{
+	margin-bottom: 100px;
+	margin-top: 50px;
+	margin-left: -4px;
+}
+		
+.progress {
+	margin-top: 200px;
+}
+.lead
+{
+    margin: auto;
+}
+
+.footer
+{
+    position: absolute;
+    text-align: center;
+	margin-left: -74px;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+}
+
+body
+{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #eee;
+}
+
+.btn-lg
+{
+    width: 180px;
+}
+
+
+</style>         
+        <meta charset="utf-8"> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    </head>
+    <body>
+        <div class="inner cover"> 
+            <title>MusiAuth</title>             
+        </div>         
+        <link href="http://getbootstrap.com/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet"> 
+        <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet"> 
+        <link href="http://getbootstrap.com/examples/cover/cover.css" rel="stylesheet"> 
+        <div class="container"> 
+            <div class="header"> 
+                <h1 class="page-header">MusiAuth</h1> 
+            </div>
+            <div class="pg-empty-placeholder"></div>
+            <div class="pg-empty-placeholder"></div>
+            <div class="progress">
+                <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%">
+                    100% Complete
+</div>
+            </div>             
+            <div class="inner cover"> 
+				<button id="btnSignOut" class="btn btn-lg btn-danger" type="button">Complete</button>
+            </div>             
+            <div class="footer"> 
+                <p>Prototype by <a href="mailto:sunday@iis.u-tokyo.ac.jp">@sunday</a></p> 
+            </div>             
+        </div>         
+        <script>// Write JavaScript here input:focus:invalid,
+
+</script>
+    </body>

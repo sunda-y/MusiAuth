@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script>
+		$(function(){
+			$('#btnSignUp').click(function(){
+				$.ajax({
+					type: 'POST',
+					url: '/signUp',
+					data: $('form').serialize(),
+					success: function(response){
+						window.location.href = '/showAudioone';
+						console.log(response);
+					},
+					error: function(error){
+						console.log(error);
+					}
+				});
+			});
+	
+		});
+		</script>	
+	
+<style type="text/css">.btn {
+  margin-top: 10%;
+}
+.lead {
+margin: 10%;
+}
+.footer {
+  position: absolute;
+  text-align: center;
+  margin-left: -74px;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+}
+
+body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #eee;
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-top: auto;
+  margin-bottom: 30px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px; 
+}
+.form-signin .form-control:focus {
+  margin-top: 10px;
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  
+}
+input:focus:valid {
+  border: 1px solid green;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+input:focus:invalid {
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+	
+.flash { 
+	background: #cee5F5; 
+	padding: 0.5em;
+    border: 1px solid #aacbe2; 
+}
+
+</style>
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    </head><body><div class="inner cover">
+        <title>MusiAuth</title>
+    </div>
+    
+    <link href="http://getbootstrap.com/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://getbootstrap.com/examples/cover/cover.css" rel="stylesheet">
+  
+
+  
+    <div class="container">
+      
+      <div class="header">
+        <h1 class="page-header">MusiAuth</h1>
+      </div>
+  
+      
+     <form class="form-signin">
+        <h2 class="form-signin-heading">Please sign up</h2>
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" name="inputEmail" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+		<button id="btnSignUp" class="btn btn-lg btn-info btn-block" type="button">Sign up</button>
+	</form>
+       
+      
+      <div class="footer">
+         <p>Prototype by <a href="mailto:sunday@iis.u-tokyo.ac.jp">@sunday</a></p>
+      </div>
+
+      
+    </div>
+  
+
+<script>// Write JavaScript here input:focus:invalid,
+
+</script></body>
